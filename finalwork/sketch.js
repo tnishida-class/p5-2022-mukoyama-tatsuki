@@ -14,10 +14,10 @@ function setup(){
   d = random(400, height - 200);
   e = random(500, height - 100);
 
-  vx1 = 0; vx1<24; vx1+=24;
-  vx2 = 0; vx2<18; vx2+=18;
-  vx3 = 0; vx3<27; vx3+=27;
-  vx4 = 0; vx4<21; vx4+=21;
+  vx1 = 0; vx1<35; vx1+=35;
+  vx2 = 0; vx2<40; vx2+=40;
+  vx3 = 0; vx3<25; vx3+=25;
+  vx4 = 0; vx4<45; vx4+=45;
   vx5 = 0; vx5<30; vx5+=30;
 
   vy = 0;
