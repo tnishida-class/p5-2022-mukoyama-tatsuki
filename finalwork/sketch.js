@@ -1,6 +1,6 @@
 // 最終課題を制作しよう
 
-let x, y, a, b, c, d, vx1, vx2, vx3, vx4, vy, ax, bx, cx, dx;
+let x, y, a, b, c, d, e, vx1, vx2, vx3, vx4, vx5, ax, bx, cx, dx, ex, vy;
 const vyMax = 30;
 
 function setup(){
@@ -8,22 +8,25 @@ function setup(){
   x = width / 10;
   y = height - 20;
   
-  a = random(150, height - 450);
-  b = random(250, height - 350);
-  c = random(350, height - 250);
-  d = random(450, height - 150);
-  
-  vx1 = 0; vx1<18; vx1+=18;
-  vx2 = 0; vx2<12; vx2+=12;
-  vx3 = 0; vx3<21; vx3+=21;
-  vx4 = 0; vx4<15; vx4+=15;
+  a = random(100, height - 500);
+  b = random(200, height - 400);
+  c = random(300, height - 300);
+  d = random(400, height - 200);
+  e = random(500, height - 100);
+
+  vx1 = 0; vx1<24; vx1+=24;
+  vx2 = 0; vx2<18; vx2+=18;
+  vx3 = 0; vx3<27; vx3+=27;
+  vx4 = 0; vx4<21; vx4+=21;
+  vx5 = 0; vx5<30; vx5+=30;
 
   vy = 0;
 
-  ax = width*1/5;
-  bx = width*2/5;
-  cx = width*3/5;
-  dx = width*4/5;
+  ax = width*1/6;
+  bx = width*1/3;
+  cx = width*1/2;
+  dx = width*2/3;
+  ex = width*5/6;
   
 }
 
@@ -41,10 +44,11 @@ function draw(){
   if(keyIsDown(RIGHT_ARROW) && x < width-10){ x += 5; }
 
   fill(0);
- rect (ax, a, 40, 10);
- rect (bx, b, 40, 10);
- rect (cx, c, 40, 10);
- rect (dx, d, 40, 10);
+ rect (ax, a, 80, 10);
+ rect (bx, b, 80, 10);
+ rect (cx, c, 80, 10);
+ rect (dx, d, 80, 10);
+ rect (ex, e, 80, 10);
 
  ax += vx1;
  if(ax < 0 || ax > width-40){ vx1 = -1 * vx1; }
@@ -54,11 +58,14 @@ function draw(){
  if(cx < 0 || cx > width-40){ vx3 = -1 * vx3; }
  dx += vx4;
  if(dx < 0 || dx > width-40){ vx4 = -1 * vx4; } 
+ ex += vx5;
+ if(ex < 0 || ex > width-40){ vx5 = -1 * vx5; } 
 
  if(x>ax && x<ax+80 && y>a-10 && y<a+20){x=width/10;y=height-20;}
  if(x>bx && x<bx+80 && y>b-10 && y<b+20){x=width/10;y=height-20;}
  if(x>cx && x<cx+80 && y>c-10 && y<c+20){x=width/10;y=height-20;}
  if(x>dx && x<dx+80 && y>d-10 && y<d+20){x=width/10;y=height-20;}
+ if(x>ex && x<ex+80 && y>e-10 && y<e+20){x=width/10;y=height-20;}
  if(y<0||y>height-20){x=width/10;y=height-20;}
  
  
