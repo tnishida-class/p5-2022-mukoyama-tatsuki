@@ -1,5 +1,5 @@
 // 最終課題を制作しよう
-
+ 
 let x, y, a, b, c, d, e, vx1, vx2, vx3, vx4, vx5, ax, bx, cx, dx, ex, vy;
 const vyMax = 30;
 
